@@ -9,6 +9,6 @@ knex.migrate
   .latest()
   .then((migrations) => {
     console.log("migrations", migrations);
-    app.listen(PORT, listener);
+    app.listen(PORT, "https://intense-river-99177.herokuapp.com/");
   })
   .catch(console.error);
