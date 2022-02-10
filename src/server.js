@@ -1,4 +1,4 @@
-const { PORT = 5008 } = process.env;
+const PORT = process.env.PORT || 5000;
 
 const app = require("./app");
 const knex = require("./db/connection");
@@ -9,6 +9,6 @@ knex.migrate
   .latest()
   .then((migrations) => {
     console.log("migrations", migrations);
-    app.listen(PORT, "https://intense-river-99177.herokuapp.com/");
+    app.listen(PORT, listener);
   })
   .catch(console.error);
